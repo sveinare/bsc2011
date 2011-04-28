@@ -1,0 +1,257 @@
+/*
+Theme Name: Bårdar Swing Club 2011
+Theme URI: http://www.bardarswingclub.no/
+Description: Custom theme for Bårdar Swing Club
+Version: 1.0
+Author: Granqvist & Grønsund
+Author URI: http://www.granqvist.no
+*/
+
+body {
+	font-family: 'Trebuchet MS', arial, sans-serif;
+	font-size: 82%;
+	line-height:150%;
+	background-image: url(images/background.jpg);
+	background-repeat: none;
+}
+#pagewrapper {
+	width:730px;
+	margin:0 auto;
+	margin-top:15px;
+}
+
+a, a:visited {
+	text-decoration:none;
+}
+a:hover, a:focus, a:active {
+	text-decoration:underline;
+}
+
+#header_wrapper {
+	background-image:url(images/Slice-1.png);
+	background-repeat: none;
+	height:299px;
+	position: relative;
+}
+#header_wrapper #link_english {
+	position: absolute;
+	left: 73px;
+	top: -2px;
+	color:#FFF;
+	font-size:83%;
+}
+#header_wrapper #main_menu {
+	position: absolute;
+	left: 45px;
+	top: 105px;
+}
+#header_wrapper #main_menu ul {
+	position: relative;
+}
+#header_wrapper #main_menu ul li {
+	line-height: 140%;
+}
+#header_wrapper #main_menu ul.sub-menu {
+	position:absolute;
+	top:0;
+	/*width:100px;*/
+	display:none;
+}
+#header_wrapper #main_menu ul.sub-menu.active {
+	left:120px;
+}
+
+
+/* Menu visibility */
+#header_wrapper ul ul {
+	display: none;
+}
+#header_wrapper ul .current_page_item ul,
+#header_wrapper ul .current_page_ancestor ul {
+	display: block;
+}
+#header_wrapper ul .current_page_item ul ul,
+#header_wrapper ul .current_page_ancestor ul ul {
+	display: none;
+}
+#header_wrapper ul .current_page_ancestor ul .current_page_item ul,
+#header_wrapper ul .current_page_ancestor ul .current_page_ancestor ul {
+	display: block;
+}
+
+/* Menu colors */
+#header_wrapper ul ul {
+	/*border: 1px solid blue;*/
+}
+#header_wrapper ul ul ul {
+	/*border: 1px solid green;*/
+}
+#header_wrapper ul li {
+	text-transform:uppercase;
+	font-size:12px;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left:8px;
+	padding-right:8px;
+	white-space:nowrap;
+	/*width:90px;*/
+}
+#header_wrapper ul ul li {
+	padding-top:2px;
+	padding-bottom:2px;
+}
+#header_wrapper ul ul li,
+#header_wrapper ul ul ul li {
+	text-transform:none;
+}
+#header_wrapper ul ul ul {
+	/*border: 1px solid green;*/
+}
+
+#header_wrapper #main_menu li.menu_selected {
+	/*background-image:url(images/menu_selected.png);*/
+	/*background-color:#EEE;*/
+	border:1px solid #E1DFED;
+	border-right-width:0;
+}
+#header_wrapper #main_menu li.menu_normal {
+	/*background-image:url(images/menu_normal.png);*/
+	border-right-width:1px;
+	border-right-style:solid;
+	border-right-color:#DDD;
+}
+#header_wrapper #main_menu li {
+	background-repeat:no-repeat;
+	background-position:right center;
+	/*padding-right:20px;*/
+}
+
+#header_wrapper #main_menu li a {
+	color:#430A5E;
+}
+#header_wrapper #main_menu li.current_page_item a,
+#header_wrapper #main_menu li.current_page_ancestor a {
+	color:#CB2FD9;/*#BDC3D7;*/
+}
+#header_wrapper #main_menu li.current_page_ancestor li.current_page_ancestor a,
+#header_wrapper #main_menu li.current_page_ancestor li.current_page_item a {
+	color:#7A1FA4;
+}
+/*#header_wrapper .menu li.current_page_ancestor li a {
+	color:#666;
+}
+#header_wrapper .menu li.current_page_ancestor.current_page_parent a {
+	color:yellow;
+}
+#header_wrapper .menu li.current_page_ancestor.current_page_parent li a {
+	color:blue;
+}*/
+
+
+#content_wrapper {
+	background-image:url(images/Slice-4.png);
+	background-repeat: repeat-y;
+	min-height:570px;
+	width: 730px;
+	float:left;
+}
+
+/* Typography */
+#content_wrapper h1, #content_wrapper h2, #content_wrapper h3 {
+	font-family: 'CaviarDreamsBold', 'Trebuchet MS', arial, sans-serif;
+	color: #480055;
+	text-transform:uppercase;
+}
+#content_wrapper h1 {
+	margin:15px 0 5px;
+	font-size:140%;
+}
+#content_wrapper h2 {
+	margin:15px 0 5px;
+	font-size:120%;
+}
+#content_wrapper h3 {
+	margin:10px 0 3px;
+	font-size:110%;
+}
+#content_wrapper p {
+	margin:1em 0;
+}
+
+#sidebar_wrapper {
+	background-image:url(images/Slice-2.png);
+	background-repeat: none;
+	width:207px;
+	height:545px;
+	float:left;
+}
+#sidebar_wrapper_inner {
+	margin-left:65px;
+	margin-right:12px;
+	margin-top:40px;
+}
+#main_wrapper {
+	float:left;
+	margin-left:50px;
+	width: 408px;
+}
+#footer_wrapper {
+	background-image:url(images/Slice-3.png);
+	background-repeat: none;
+	height:84px;
+	clear: both;
+	position:relative;
+}
+#footer_rookie {
+	position:absolute;
+	top:-71px;
+	left:83px;
+}
+#footer_email {
+	position:absolute;
+	right:119px;
+	top:14px;
+	color:#FFF;
+}
+#footer_by {
+	position:absolute;
+	left:83px;
+	top:7px;
+	font-size:78%;
+}
+
+#event_list li {
+	padding-bottom:5px;	
+}
+.event_date {
+	font-family: 'CaviarDreamsBold', 'Trebuchet MS', arial, sans-serif;
+	font-size:120%;
+	color:#FFF;
+}
+.event_time {
+	padding-right:3px;
+	color:#68067F;
+}
+.event_title {
+	cursor:pointer;
+}
+
+/*   */
+
+img.alignright {
+    display: inline;
+    margin: 0 0 2px 7px;
+    padding: 4px;
+}
+.alignright {
+    float: right;
+}
+img.alignleft {
+    display: inline;
+    margin: 0 7px 2px 0;
+    padding: 4px;
+}
+.alignleft {
+    float: left;
+}
+
