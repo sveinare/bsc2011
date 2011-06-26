@@ -4,23 +4,10 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title><? wp_title('&laquo;', true, 'right'); ?> <? bloginfo('name'); ?></title>
 
-    <!-- Loading fonts early -->
-    <!--link href="http://fonts.googleapis.com/css?family=Cantarell:regular,italic,bold,bolditalic|Pacifico:regular" rel="stylesheet" type="text/css" /-->
-    <!--link rel="stylesheet" href="http://f.fontdeck.com/s/css/uH5+KWQnibDTJRYggGJ9XZLTAgw/gronsund.com/6931.css" type="text/css" /-->
-	<link rel="stylesheet" type="text/css" media="all" href="<? bloginfo('template_url'); ?>/Caviar-Dreams-fontfacekit/stylesheet.css" charset="utf-8"/>
-
 	<link rel="stylesheet" type="text/css" media="all" href="<? bloginfo('template_url'); ?>/reset.css" />
 	<link rel="stylesheet" type="text/css" media="all" href="<? bloginfo('stylesheet_url'); ?>" />
 
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-
-	<!--
-	<link rel="stylesheet" type="text/css" media="all" href="<? bloginfo('template_url'); ?>/qTip/jquery.qtip.min.css" charset="utf-8"/>
-	<script type="text/javascript" src="<? bloginfo('template_url'); ?>/qTip/jquery.qtip.pack.js"></script>
-	-->
-
-	<!--script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAaDDZieMAUcVDAHPh2--0NhSXB-9S_gVtDrZNl_HXsJX98kH4GBQLo4OPmdxVDyHGF41khT2p13t-8g"></script-->
-	<!--script type="text/javascript" src="<? bloginfo('template_url'); ?>/google_calendar.js"></script-->
 
 	<script type="text/javascript">
 
@@ -137,16 +124,16 @@
                     });            
             }
             
-            preloadImage(1, -94, -64, "http://gronsund.com/wp/kursaktiviteter/kurs/nybegynnerkurs/#1");
-            preloadImage(2, 45, -68, "http://gronsund.com/wp/kursaktiviteter/kurs/nybegynnerkurs/#2");
-            preloadImage(3, -64, 32, "http://gronsund.com/wp/kursaktiviteter/kurs/nybegynnerkurs/#3");
+            preloadImage(1, -94, -64, "<? bloginfo('url'); ?>/kursaktiviteter/kurs/");
+            preloadImage(2, 45, -68, "<? bloginfo('url'); ?>/kursaktiviteter/kurs/nybegynnerkurs/#2");
+            preloadImage(3, -64, 32, "<? bloginfo('url'); ?>/kursaktiviteter/kurs/nybegynnerkurs/#3");
             
             $("#footer_rookie").click(function(){
                 jQuery("#footer_rookie_wrapper img.bubble").toggle();
             });
             
             // Weekday-fix // SUPER HACK!!!
-            $(".gce-list-title").each(function(){
+            /*$(".gce-list-title").each(function(){
                 var dateStr = $(this).html();
                 dateStr = dateStr.replace(/Monday/, "Mandag");
                 dateStr = dateStr.replace(/Tuesday/, "Tirsdag");
@@ -156,14 +143,12 @@
                 dateStr = dateStr.replace(/Saturday/, "Lørdag");
                 dateStr = dateStr.replace(/Sunday/, "Søndag");
                 $(this).html(dateStr);
-            });
+            });*/
 
 	  	});
 	})(jQuery);
 	</script>
 	<? wp_head(); ?>
-
-    <!-- script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script -->
 
 </head>
 <body>
@@ -171,7 +156,7 @@
 	<div id="pagewrapper">
 	
 	<div id="header_wrapper">
-		<a href="/wp/visitors" id="link_english">ENGLISH</a>
+		<a href="<? bloginfo('url'); ?>/visitors" id="link_english">ENGLISH</a>
 		<div id="searchform_wrapper">
 		    <form id="searchform" method="get" action="<?php bloginfo('home'); ?>">
 		        <div style="position:relative;height:30px;">

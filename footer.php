@@ -13,8 +13,6 @@
 </div>
             
 <? wp_footer(); ?>
-<script src="<? bloginfo('template_url'); ?>/blogger.js" type="text/javascript"></script>
-<script type="text/javascript" src="http://api.twitter.com/1/statuses/user_timeline.json?screen_name=bardarswingclub&callback=twitterCallback2&count=1"></script>
 
 </body>
 </html>

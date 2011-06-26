@@ -8,8 +8,7 @@ Author URI: http://www.granqvist.no
 */
 
 body {
-	font-family: Cantarell, 'Trebuchet MS', arial, sans-serif;
-/*	font-family: 'Trebuchet MS', arial, sans-serif;*/
+	font-family: 'Trebuchet MS', arial, sans-serif;
 
     /*font-family:"Skolar Regular", 'Times New Roman', serif; 
     font-size-adjust:0.47; 
@@ -18,9 +17,10 @@ body {
 
 	font-size: 82%;
 	line-height:150%;
-	background-image: url(images/background.jpg);
-	background-position: 50% 50%;
-	background-repeat: none;
+	/*background:#281507 url(images/background_8.jpg) repeat-x 50% 0%;*/
+	/*background:#000115 url(images/background.jpg) repeat-x 50% 0%;*/
+	/*background:#000115 url(images/background_9.jpg) repeat-x 50% 0%;*/
+	background:#100900 url(images/background_11.jpg) repeat-x 50% 0%;
 }
 #pagewrapper {
 	width:819px;
@@ -28,21 +28,28 @@ body {
 	margin-top:15px;
 }
 
-a {
+a, a:visited {
 	text-decoration:none;
-	color:#5721cb;
-}
-a:visited {
+	/*color:#5721cb;*/
+	/*color:#695037;*/
 	color:#923c9a;
 }
 a:hover, a:focus, a:active {
 	text-decoration:underline;
 }
-h1 a, h2 a, h3 a {
+h1 a[name], h2 a[name], h3 a[name] { /* Linker med name får ikke hover-effekt */
     color:inherit;
 	text-decoration:none;
 }
-a.pdf {
+h1 a[href]:after, h2 a[href]:after, h3 a[href]:after { /* Med mindre linken bare er en "a name", vis >> */
+	content:" \00BB \00a0";
+}
+
+#main_wrapper a[href^="mailto:"] {
+	padding-left: 20px;
+	background: url(images/email.png) no-repeat 0px 2px;
+}
+a[href$='.pdf'], a.pdf {
     background-image: url(images/pdf.png);
     background-repeat: no-repeat;
     padding-left: 18px;
@@ -185,6 +192,7 @@ a.pdf {
 
 /* Typography */
 #content_wrapper h1, #content_wrapper h2, #content_wrapper h3 {
+	font-family: Cantarell, 'Trebuchet MS', arial, sans-serif;
 /*	font-family: 'CaviarDreamsBold', 'Trebuchet MS', arial, sans-serif;*/
 	color: #480055;
 }
@@ -253,6 +261,20 @@ a.pdf {
 	margin-left:334px;
 	margin-right:60px;
 }
+#main_wrapper td {
+	vertical-align:top; /*override reset*/
+	padding:0px 10px;
+}
+#main_wrapper td h3 {
+	margin-top:0; /* override */
+}
+#main_wrapper ul li {
+	list-style:disc; 
+}
+#main_wrapper ul {
+	padding-left:20px; 
+	margin-bottom:1em;
+}
 #footer_wrapper {
 	background-image:url(images/Slice-3-long.png);
 	background-repeat: none;
@@ -299,6 +321,27 @@ a.pdf {
     right: 16px;
     top:  -1px;
 }
+.widget.twitter-widget {
+	margin-top:40px;
+}
+.widget.twitter-widget ul {
+	margin-left:-92px;
+    background-image: url(images/twitter_bg_bsc.png);
+    background-repeat: no-repeat;
+    display:block;
+    width: 248px;
+    min-height: 54px;
+    background-position:0 12px;
+}
+.widget.twitter-widget ul li {
+	margin-left:55px;
+	padding:15px;
+	background-color:#FFF;
+    font-size: 90%;
+    line-height: 1.3em;
+    vertical-align:middle;
+}
+
 #twitter_message {
     position: relative;
     /*height: 78px;
@@ -360,9 +403,11 @@ a.pdf {
 
 .widget_gce_widget .gce-widget-list ul.gce-list li p.gce-list-title, .event_date {
     text-shadow: 2px 2px 2px #aaa;
+	font-family: Cantarell, 'Trebuchet MS', arial, sans-serif;
 /*	font-family: 'Pacifico', 'CaviarDreamsBold', 'Trebuchet MS', arial, sans-serif;*/
 	font-size:120%;
 	color:#FFF;
+	text-transform : capitalize;
 /*	padding-bottom:11px;*/
 }
 .widget_gce_widget .gce-widget-list .event_time {
@@ -376,30 +421,73 @@ a.pdf {
 .widget_gce_widget .gce-widget-list .event_location {
     font-size: 85%;    
 }
+/*.widget_gce_widget h2.widgettitle {
+	text-indent:-9999px;
+	background-image:url(images/husk_ogsa.png);
+	margin:0;
+	width:133px;
+	height:40px;
+}*/
 .calendar_link {
     font-weight: bold;
 }
+.calendar_link:after {
+	content:" \00BB \00a0";
+}
+
 #main_wrapper .gce-page-grid .gce-calendar td {
     height: 70px; /* override */
 }
+#main_wrapper table.gce-calendar tr td {
+	vertical-align:middle;
+}
+#main_wrapper table.gce-calendar tr td.gce-has-events:hover {
+	background-color:#d9d7eb;
+}
+
+
+#content_wrapper div.post {
+	margin-bottom:30px;
+}
+#content_wrapper div.post.sticky {
+	background-color:#68067F;
+	color:#FFF;
+	padding:15px 20px;
+}
+#content_wrapper div.post.sticky h2 {
+	margin-top:3px;
+	margin-bottom:5px;
+	color:#bea7d7;
+}
+div.post.sticky a {
+	color:#AAA;
+} 
 
 /*   */
 
-img.alignright {
-    display: inline;
-    margin: 0 0 2px 7px;
-    padding: 4px;
-}
-.alignright {
+.alignright, img.alignright {
     float: right;
-}
-img.alignleft {
     display: inline;
-    margin: 0 7px 2px 0;
-    padding: 4px;
+    margin: 7px 0 2px 20px;
 }
-.alignleft {
+.alignright.wp-caption {
+    margin-left: 10px; /* reduced padding since it's also auto-padded */
+}
+.alignleft, img.alignleft {
     float: left;
+    display: inline;
+    margin: 7px 20px 2px 0;
+}
+.alignleft.wp-caption {
+    margin-right: 10px; /* reduced padding since it's also auto-padded */
+}
+.alignnone, img.alignnone {
+	margin-top:7px;
+}
+.wp-caption-text {
+	font-style:italic;
+	font-size:85%;
+	color:#666;
 }
 
 
@@ -444,4 +532,5 @@ img.alignleft {
     }
 
 }
+
 
